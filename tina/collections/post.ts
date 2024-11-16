@@ -1,6 +1,5 @@
-/**
- * @type {import('tinacms').Collection}
- */
+import { Collection } from "tinacms";
+
 export default {
   label: "Blog Posts",
   name: "post",
@@ -12,13 +11,14 @@ export default {
       name: "title",
     },
     {
-      type: "string",
-      label: "Blog Post Body",
-      name: "body",
-      isBody: true,
-      ui: {
-        component: "textarea",
-      },
+      name: "image",
+      label: "Image",
+      type: "image",
+    },
+    {
+      name: "content",
+      label: "Blog Post Content",
+      type: "rich-text",
     },
   ],
   ui: {
@@ -26,4 +26,4 @@ export default {
       return `/posts/${document._sys.filename}`;
     },
   },
-};
+} as Collection;

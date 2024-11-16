@@ -1,7 +1,8 @@
 "use client";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { tinaField, useTina } from "tinacms/dist/react";
-import type { PageQuery } from "../../tina/__generated__/types";
+import type { PageQuery } from "@/base/tina/__generated__/types";
+import Markdown from "@/components/render-markdown";
 
 interface ClientPageProps {
   query: string;
@@ -22,7 +23,7 @@ export default function ClientPage(props: ClientPageProps) {
   const content = data.page.body;
   return (
     <div data-tina-field={tinaField(data.page, "body")}>
-      <TinaMarkdown content={content} />
+      <Markdown content={content} />
     </div>
   );
 }

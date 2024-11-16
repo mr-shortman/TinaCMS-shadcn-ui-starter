@@ -1,6 +1,5 @@
-/**
- * @type {import('tinacms').Collection}
- */
+import { Collection } from "tinacms";
+
 export default {
   label: "Page Content",
   name: "page",
@@ -19,7 +18,10 @@ export default {
       if (document._sys.filename === "home") {
         return `/`;
       }
+      if (document._sys.filename.length) {
+        return `/${document._sys.filename}`;
+      }
       return undefined;
     },
   },
-};
+} as Collection;

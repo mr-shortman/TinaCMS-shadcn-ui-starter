@@ -1,0 +1,30 @@
+{
+  "title": "Website",
+  "navigation": [
+    {
+      "label": "Home",
+      "link": "/",
+      "external": false
+    },
+    {
+      "label": "About",
+      "link": "/about",
+      "external": false
+    },
+    {
+      "label": "Contact",
+      "link": "/contact",
+      "external": false
+    },
+    {
+      "label": "Blog",
+      "link": "/posts",
+      "external": false
+    },
+    {
+      "label": "Google",
+      "link": "https://google.com",
+      "external": true
+    }
+  ]
+}
